@@ -1,0 +1,64 @@
+body {
+    background-color: black;
+}
+
+h1{
+    font-family: 'Courier', monospace;
+    font-weight: lighter;
+    position: relative;
+    width: max-content;
+    font-size: larger;
+    margin-top: 10%;
+    margin-left: 10%;
+    overflow: hidden;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
+#button{
+    font-family: 'Courier', monospace;
+    font-weight: lighter;
+    position: relative;
+    font-size: larger;
+    color: chartreuse;
+    background-color: black;
+    border-color: chartreuse;
+    padding: 5px;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 18.5s forwards;
+}
+
+.typed-text{
+    color: chartreuse;
+}
+
+.cursor{
+    display: inline-block;
+    width: 12px;
+    background-color: chartreuse;
+    animation: blink 1.4s infinite;
+}
+.cursor.typing{
+    animation: none;
+}
+
+@keyframes blink{
+    0%{background-color: chartreuse;}
+    49%{background-color: chartreuse;}
+    50%{background-color: transparent;}
+    99%{background-color: transparent;}
+    100%{background-color: chartreuse;}
+}
+
+@keyframes fadeInUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
